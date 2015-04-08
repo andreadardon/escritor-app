@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  word_count: 1
+  exercise: 
+  user: 
+
+two:
+  body: MyText
+  word_count: 1
+  exercise: 
+  user: 

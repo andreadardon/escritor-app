@@ -1,0 +1,16 @@
+ <script type=""text/javascript"">
+  var cnt;
+  function wordcount(count) {
+    var words = count.split(/\s/);
+    cnt = words.length;
+    var ele = document.getElementById('w_count');
+    ele.value = cnt;
+  }
+  document.write("<input type=text id=w_count size=4 readonly>");
+</script>
+
+<%= form_for Answer.new do |f| %>
+  <%= f.text_area :body,  onkeyup: "wordcount(this.value)", style: "width:550px; height:200px;" %>
+ 
+  <%= f.submit "Guardar" %>
+<% end %>

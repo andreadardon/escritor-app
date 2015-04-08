@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :answers
+
+  resources :exercises
+
   devise_for :usuarios
   # get 'welcome/index'
 
@@ -8,8 +13,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get '/ejercicios/' => 'ejercicios#index'
+  get '/exercises/' => 'exercises#index'
 
+  resources :answers
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
